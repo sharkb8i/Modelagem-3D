@@ -89,6 +89,14 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Editar">
               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cameraConfigsClicked" text="Objeto">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/brick.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
                   <MenuItem mnemonicParsing="false" onAction="#cameraConfigsClicked" text="Câmera">
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
@@ -96,7 +104,8 @@
                               <Image url="@../icons/cam.png" />
                            </image>
                         </ImageView>
-                     </graphic></MenuItem>
+                     </graphic>
+                  </MenuItem>
               </items>
             </Menu>
           <Menu fx:id="menuItemHelp" mnemonicParsing="false" text="Ajuda">
@@ -218,8 +227,8 @@
                         </RadioButton>
                      </children>
                   </GridPane>
-                  <Separator layoutX="1.0" layoutY="340.0" prefWidth="200.0" />
-                  <Group layoutX="9.0" layoutY="-3.0">
+                  <Separator layoutX="1.0" layoutY="343.0" prefWidth="200.0" />
+                  <Group layoutX="9.0" layoutY="9.0">
                      <children>
                         <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="43.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -229,7 +238,7 @@
                         <Text layoutX="67.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luz Ambiente" />
                      </children>
                   </Group>
-                  <Group>
+                  <Group layoutY="12.0">
                      <children>
                         <Text layoutX="14.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ir" />
                         <TextField fx:id="luzAmbienteR" layoutX="26.0" layoutY="377.0" prefHeight="25.0" prefWidth="34.0" text="255" />
@@ -239,7 +248,6 @@
                         <TextField fx:id="luzAmbienteB" layoutX="153.0" layoutY="377.0" prefHeight="25.0" prefWidth="34.0" text="255" />
                      </children>
                   </Group>
-                  <Separator layoutX="1.0" layoutY="420.0" prefWidth="200.0" />
                   <Text layoutX="67.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fonte de Luz" />
                   <Group layoutX="1.0" layoutY="80.0">
                      <children>
