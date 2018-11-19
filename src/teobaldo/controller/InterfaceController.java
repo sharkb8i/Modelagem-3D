@@ -103,6 +103,8 @@ public class InterfaceController implements Initializable {
         gcYZ.translate(desX, desY);
         gcPers.translate(desX, desY);
         
+        
+        
         // Setando a cor da linha padrão para preto
         Color awtColor = new Color(0, 0, 0); // COR PRETA
         int r = awtColor.getRed();
