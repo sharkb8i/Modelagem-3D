@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
-<VBox fx:id="vBoxHome" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teobaldo.controller.InterfaceController">
+<VBox fx:id="vBoxHome" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teobaldo.controller.InterfaceController">
    <children>
       <MenuBar fx:id="menuBar" VBox.vgrow="ALWAYS">
         <menus>
@@ -89,7 +89,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Editar">
               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#cameraConfigsClicked" text="Objeto">
+                  <MenuItem mnemonicParsing="false" onAction="#objetoConfigsClicked" text="Objeto">
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -281,7 +281,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Canvas fx:id="canvasXY" height="348.0" width="537.0" />
+                  <Canvas fx:id="canvasXY" height="290.0" width="296.0" />
                   <ImageView fx:id="imgXY" fitHeight="97.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets right="3.0" top="3.0" />
@@ -298,7 +298,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Canvas fx:id="canvasYZ" height="348.0" width="537.0" GridPane.columnIndex="1" />
+                  <Canvas fx:id="canvasYZ" height="291.0" width="296.0" GridPane.columnIndex="1" />
                   <ImageView fx:id="imgYZ" fitHeight="97.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                      <image>
                         <Image url="@../icons/planoZY.png" />
@@ -315,7 +315,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Canvas fx:id="canvasXZ" height="348.0" width="537.0" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canvasXZ" height="285.0" width="296.0" GridPane.rowIndex="1" />
                   <ImageView fx:id="imgXZ" fitHeight="97.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <image>
                         <Image url="@../icons/planoXZ.png" />
@@ -332,7 +332,7 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Canvas fx:id="canvasPers" height="348.0" width="537.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canvasPers" height="285.0" width="294.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ImageView fx:id="imgPers" fitHeight="110.0" fitWidth="100.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <image>
                         <Image url="@../icons/planoPers.png" />

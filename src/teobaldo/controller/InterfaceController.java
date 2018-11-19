@@ -189,29 +189,27 @@ public class InterfaceController implements Initializable {
         System.exit(0);
     }
     
-    /*
     @FXML
-    public void lightConfigsClicked(ActionEvent e) throws IOException {
+    public void objetoConfigsClicked(ActionEvent e) throws IOException {
         selOpcao(7);
         
         // Criando novo loader, pane para referência e setando local
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(LightConfigsController.class.getResource("/teobaldo/view/LightConfigs.fxml"));
+        loader.setLocation(ObjectConfigsController.class.getResource("/teobaldo/view/ObjectConfigs.fxml"));
         AnchorPane page = (AnchorPane) loader.load();
 
         // Criando um Estágio de Diálogo (Stage Dialog)
         Stage dialogStage = new Stage();
-        dialogStage.setTitle("Configuração de Luz");
+        dialogStage.setTitle("Propriedades do Objeto");
         Scene scene = new Scene(page);
         dialogStage.setScene(scene);
 
         // Setando o Controller.
-        LightConfigsController lController = loader.getController();
-        lController.setDialogStage(dialogStage);
+        ObjectConfigsController ocController = loader.getController();
+        ocController.setDialogStage(dialogStage);
         
         dialogStage.show();
     }
-    */
     
     @FXML
     public void cameraConfigsClicked(ActionEvent e) throws IOException {
@@ -450,29 +448,6 @@ public class InterfaceController implements Initializable {
                             controlMouseAxisX = event.getX();
                             controlMouseAxisY = event.getY();
                         });
-                        
-                        //Modelo Rotacao 2
-                        /*controlRotacao = 0;
-                        
-                        this.canvasXY.setOnMouseClicked(c -> {
-                            opcaoTrans = 2;
-                            if((desY - c.getY() < 0) && (c.getX() - desX > 0)){
-                                //Rotaciona no eixo X Sentido: Horario
-                                controlRotacao = 1;
-                            }
-                            if((desY - c.getY() < 0) && (c.getX() - desX < 0)){
-                                //Rotaciona no eixo X Sentido: Anti-Horario
-                                controlRotacao = 2;
-                            }
-                            if((desY - c.getY() > 0) && (c.getX() - desX > 0)){
-                                //Rotaciona no eixo Y Sentido: Horario
-                                controlRotacao = 3;
-                            }
-                            if((desY - c.getY() > 0) && (c.getX() - desX < 0)){
-                                //Rotaciona no eixo Y Sentido: Anti-Horario
-                                controlRotacao = 4;
-                            }
-                        });*/
                     }
                     if(transformacoesComboBox.getValue() == "Escala") {
                         this.canvasXY.setOnMousePressed(this::escalar);
@@ -499,30 +474,6 @@ public class InterfaceController implements Initializable {
                             controlMouseAxisX = event.getX();
                             controlMouseAxisY = event.getY();
                         });
-                        
-                        //Modelo de Rotacao 2
-                        /*
-                        controlRotacao = 0;
-                        
-                        this.canvasYZ.setOnMouseClicked(c -> {
-                            opcaoTrans = 2;
-                            if((desY - c.getY() < 0) && (c.getX() - desX > 0)){
-                                //Rotaciona no eixo X Sentido: Horario
-                                controlRotacao = 1;
-                            }
-                            if((desY - c.getY() < 0) && (c.getX() - desX < 0)){
-                                //Rotaciona no eixo X Sentido: Anti-Horario
-                                controlRotacao = 2;
-                            }
-                            if((desY - c.getY() > 0) && (c.getX() - desX > 0)){
-                                //Rotaciona no eixo Y Sentido: Horario
-                                controlRotacao = 3;
-                            }
-                            if((desY - c.getY() > 0) && (c.getX() - desX < 0)){
-                                //Rotaciona no eixo Y Sentido: Anti-Horario
-                                controlRotacao = 4;
-                            }
-                        });*/
                     }
                     if(transformacoesComboBox.getValue() == "Escala") {
                         this.canvasYZ.setOnMousePressed(this::escalar);
@@ -548,30 +499,6 @@ public class InterfaceController implements Initializable {
                             controlMouseAxisX = event.getX();
                             controlMouseAxisY = event.getY();
                         });
-                        
-                        //Modelo de Rotação 2
-                        /*
-                        controlRotacao = 0;
-                        
-                        this.canvasXZ.setOnMouseClicked(c -> {
-                            opcaoTrans = 2;
-                            if((desY - c.getY() < 0) && (c.getX() - desX > 0)){
-                                //Rotaciona no eixo X Sentido: Horario
-                                controlRotacao = 1;
-                            }
-                            if((desY - c.getY() < 0) && (c.getX() - desX < 0)){
-                                //Rotaciona no eixo X Sentido: Anti-Horario
-                                controlRotacao = 2;
-                            }
-                            if((desY - c.getY() > 0) && (c.getX() - desX > 0)){
-                                //Rotaciona no eixo Y Sentido: Horario
-                                controlRotacao = 3;
-                            }
-                            if((desY - c.getY() > 0) && (c.getX() - desX < 0)){
-                                //Rotaciona no eixo Y Sentido: Anti-Horario
-                                controlRotacao = 4;
-                            }
-                        });*/
                     }
                     if(transformacoesComboBox.getValue() == "Escala") {
                        this.canvasXZ.setOnMousePressed(this::escalar);
@@ -762,48 +689,6 @@ public class InterfaceController implements Initializable {
                 clearAll();
                 drawCanvas();
             });
-            //Modelo de rotacao 2
-            /*this.canvasXY.setOnMouseDragged(event -> {
-                
-                for (int i = 0; i < this.selectObj.getVertices().size(); i++) {
-                    System.out.println(this.selectObj.getVertices().get(i).getX());
-                    System.out.println(event.getX());
-                    if(controlRotacao == 1){
-                        
-                        double y = ((this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*1 / 180))) - (this.selectObj.getVertices().get(i).getZ()*Math.sin(Math.PI*1/180)));
-                        double z = ((this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*1/180)) + (this.selectObj.getVertices().get(i).getZ()*(Math.cos(Math.PI*1 / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setY(y);
-                        this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                    if(controlRotacao == 2){
-                        
-                        double y = ((this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*(-1) / 180))) - (this.selectObj.getVertices().get(i).getZ()*Math.sin(Math.PI*(-1)/180)));
-                        double z = ((this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*(-1)/180)) + (this.selectObj.getVertices().get(i).getZ()*(Math.cos(Math.PI*(-1) / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setY(y);
-                        this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                    if(controlRotacao == 3){
-                        
-                       double x = ((this.selectObj.getVertices().get(i).getZ()*(Math.sin(Math.PI*1 / 180))) + (this.selectObj.getVertices().get(i).getX()*Math.cos(Math.PI*1/180)));
-                       double z = ((this.selectObj.getVertices().get(i).getZ()*Math.cos(Math.PI*1/180)) - (this.selectObj.getVertices().get(i).getX()*(Math.sin(Math.PI*1 / 180))));
-                        
-                       this.selectObj.getVertices().get(i).setX(x);
-                       this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                    if(controlRotacao == 4){
-                        
-                        double x = ((this.selectObj.getVertices().get(i).getZ()*(Math.sin(Math.PI*(-1) / 180))) + (this.selectObj.getVertices().get(i).getX()*Math.cos(Math.PI*(-1)/180)));
-                        double z = ((this.selectObj.getVertices().get(i).getZ()*Math.cos(Math.PI*(-1)/180)) - (this.selectObj.getVertices().get(i).getX()*(Math.sin(Math.PI*(-1) / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setX(x);
-                        this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                }
-                clearAll();
-                drawCanvas();
-            });*/
         }
         if(e.getSource() == canvasYZ && opcaoTrans == 2) {
             System.out.println("CANVAS Y Z");
@@ -856,50 +741,6 @@ public class InterfaceController implements Initializable {
                 clearAll();
                 drawCanvas();
             });
-            
-            //Modelo de Rotacao 2
-            /*
-            this.canvasYZ.setOnMouseDragged(event -> {
-                
-                for (int i = 0; i < this.selectObj.getVertices().size(); i++) {
-                    System.out.println(this.selectObj.getVertices().get(i).getX());
-                    
-                    if(controlRotacao == 1){
-                        
-                        double x = ((this.selectObj.getVertices().get(i).getX()*(Math.cos(Math.PI*1 / 180))) - (this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*1/180)));
-                        double y = ((this.selectObj.getVertices().get(i).getX()*Math.sin(Math.PI*1/180)) + (this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*1 / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setX(x);
-                        this.selectObj.getVertices().get(i).setY(y);
-                    }
-                    if(controlRotacao == 2){
-                        
-                        double x = ((this.selectObj.getVertices().get(i).getX()*(Math.cos(Math.PI*(-1) / 180))) - (this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*(-1)/180)));
-                        double y = ((this.selectObj.getVertices().get(i).getX()*Math.sin(Math.PI*(-1)/180)) + (this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*(-1) / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setX(x);
-                        this.selectObj.getVertices().get(i).setY(y);
-                    }
-                    if(controlRotacao == 3){
-                        
-                       double x = ((this.selectObj.getVertices().get(i).getZ()*(Math.sin(Math.PI*1 / 180))) + (this.selectObj.getVertices().get(i).getX()*Math.cos(Math.PI*1/180)));
-                       double z = ((this.selectObj.getVertices().get(i).getZ()*Math.cos(Math.PI*1/180)) - (this.selectObj.getVertices().get(i).getX()*(Math.sin(Math.PI*1 / 180))));
-                        
-                       this.selectObj.getVertices().get(i).setX(x);
-                       this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                    if(controlRotacao == 4){
-                        
-                        double x = ((this.selectObj.getVertices().get(i).getZ()*(Math.sin(Math.PI*(-1) / 180))) + (this.selectObj.getVertices().get(i).getX()*Math.cos(Math.PI*(-1)/180)));
-                        double z = ((this.selectObj.getVertices().get(i).getZ()*Math.cos(Math.PI*(-1)/180)) - (this.selectObj.getVertices().get(i).getX()*(Math.sin(Math.PI*(-1) / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setX(x);
-                        this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                }
-                clearAll();
-                drawCanvas();
-            });*/
         }
 
         if(e.getSource() == canvasXZ && opcaoTrans == 2) {
@@ -1003,50 +844,6 @@ public class InterfaceController implements Initializable {
                 clearAll();
                 drawCanvas();
             });
-            
-            //Modelo Rotacao 2
-            /*
-            this.canvasXZ.setOnMouseDragged(event -> {
-                
-                for (int i = 0; i < this.selectObj.getVertices().size(); i++) {
-                    System.out.println(this.selectObj.getVertices().get(i).getX());
-                    
-                    if(controlRotacao == 1){
-                        
-                        double y = ((this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*1 / 180))) - (this.selectObj.getVertices().get(i).getZ()*Math.sin(Math.PI*1/180)));
-                        double z = ((this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*1/180)) + (this.selectObj.getVertices().get(i).getZ()*(Math.cos(Math.PI*1 / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setY(y);
-                        this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                    if(controlRotacao == 2){
-                        
-                        double y = ((this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*(-1) / 180))) - (this.selectObj.getVertices().get(i).getZ()*Math.sin(Math.PI*(-1)/180)));
-                        double z = ((this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*(-1)/180)) + (this.selectObj.getVertices().get(i).getZ()*(Math.cos(Math.PI*(-1) / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setY(y);
-                        this.selectObj.getVertices().get(i).setZ(z);
-                    }
-                    if(controlRotacao == 3){
-                        
-                        double x = ((this.selectObj.getVertices().get(i).getX()*(Math.cos(Math.PI*1 / 180))) - (this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*1/180)));
-                        double y = ((this.selectObj.getVertices().get(i).getX()*Math.sin(Math.PI*1/180)) + (this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*1 / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setX(x);
-                        this.selectObj.getVertices().get(i).setY(y);
-                    }
-                    if(controlRotacao == 4){
-                        
-                        double x = ((this.selectObj.getVertices().get(i).getX()*(Math.cos(Math.PI*(-1) / 180))) - (this.selectObj.getVertices().get(i).getY()*Math.sin(Math.PI*(-1)/180)));
-                        double y = ((this.selectObj.getVertices().get(i).getX()*Math.sin(Math.PI*(-1)/180)) + (this.selectObj.getVertices().get(i).getY()*(Math.cos(Math.PI*(-1) / 180))));
-                        
-                        this.selectObj.getVertices().get(i).setX(x);
-                        this.selectObj.getVertices().get(i).setY(y);
-                    }
-                }
-                clearAll();
-                drawCanvas();
-            });*/
         }
     }
     

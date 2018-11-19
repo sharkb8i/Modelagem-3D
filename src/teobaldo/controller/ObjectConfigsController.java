@@ -14,7 +14,7 @@ import teobaldo.model.Objeto;
  *
  * @author Diedrich_
  */
-public class LightConfigsController implements Initializable {
+public class ObjectConfigsController implements Initializable {
     
     private Stage dialogStage;
     
