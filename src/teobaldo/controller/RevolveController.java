@@ -154,29 +154,6 @@ public class RevolveController implements Initializable {
                 obj.addFace(f);
                 
                 //FALTA AJUSTAR PRA NAO REPETIR OS PONTOS
-                if(full360Control == 1){
-                    
-                    novoVertice = obj.getVertices().get(aux360);
-
-                    obj.addAresta(new Aresta(obj.getVertices().get(aux360), obj.getVertices().get(i+(sizeInicial))));
-                    obj.getFaces().get(controlFaces).addAresta(obj.getArestas().getLast());
-                    
-                    if(firstA == true) {
-                        firstA = false;
-                    } else {
-                        obj.getFaces().get(controlFaces-1).addAresta(obj.getArestas().getLast());
-                        obj.addAresta(new Aresta(obj.getVertices().get(i+sizeInicial-1), obj.getVertices().get(i+sizeInicial)));
-                        obj.getFaces().get(controlFaces-1).addAresta(obj.getArestas().getLast());
-                        
-                        if(obj.isLocked() && (i == (size-1))) {
-                            obj.addAresta(new Aresta(obj.getVertices().get(i+sizeInicial), obj.getVertices().get(size)));
-                            obj.getFaces().get(controlFaces).addAresta(obj.getFaces().get(controlFaces-(sizeInicial-1)).getArestas().get(1)); // A4
-                            obj.getFaces().get(controlFaces).addAresta(obj.getArestas().getLast()); // A11
-                        }
-                    }
-                    
-                    aux360++;
-                }
                 
                 if(full360Control != 1){
                     // Rotação Canônica
