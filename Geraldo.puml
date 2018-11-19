@@ -1,0 +1,134 @@
+@startuml
+annotation java.lang.Override
+annotation javafx.fxml.FXML
+class java.io.File
+class java.io.FileInputStream
+class java.io.FileNotFoundException
+class java.io.FileOutputStream
+class java.io.FileWriter
+class java.io.IOException
+class java.io.ObjectInputStream
+class java.io.ObjectOutputStream
+class java.net.URL
+class java.nio.file.Files
+class java.util.LinkedList
+class java.util.ResourceBundle
+class java.util.Scanner
+class java.util.stream.Collectors
+class javafx.application.Application
+class javafx.event.ActionEvent
+class javafx.fxml.FXMLLoader
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.canvas.Canvas
+class javafx.scene.canvas.GraphicsContext
+class javafx.scene.control.Button
+class javafx.scene.control.ComboBox
+class javafx.scene.control.RadioButton
+class javafx.scene.image.Image
+class javafx.scene.input.MouseButton
+class javafx.scene.input.MouseEvent
+class javafx.scene.layout.AnchorPane
+class javafx.scene.layout.GridPane
+class javafx.scene.paint.Color
+class javafx.stage.Stage
+class javax.swing.JFileChooser
+class teobaldo.Teobaldo
+class teobaldo.controller.ArquivoController
+class teobaldo.controller.InterfaceController
+class teobaldo.controller.ObjetoController
+class teobaldo.controller.RevolveController
+class teobaldo.controller.SolidoController
+class teobaldo.model.Aresta
+class teobaldo.model.Arquivos
+class teobaldo.model.Face
+class teobaldo.model.Lista
+class teobaldo.model.Objeto
+class teobaldo.model.Solido
+class teobaldo.model.Vertice
+interface java.io.Serializable
+interface java.lang.Cloneable
+interface javafx.fxml.Initializable
+teobaldo.Teobaldo ..> java.lang.Override
+teobaldo.Teobaldo --|> javafx.application.Application
+teobaldo.Teobaldo ..> javafx.fxml.FXMLLoader
+teobaldo.Teobaldo ..> javafx.scene.Parent
+teobaldo.Teobaldo ..> javafx.scene.Scene
+teobaldo.Teobaldo ..> javafx.scene.image.Image
+teobaldo.Teobaldo ..> javafx.stage.Stage
+teobaldo.controller.ArquivoController ..> java.io.File
+teobaldo.controller.ArquivoController ..> java.io.FileInputStream
+teobaldo.controller.ArquivoController ..> java.io.FileNotFoundException
+teobaldo.controller.ArquivoController ..> java.io.FileOutputStream
+teobaldo.controller.ArquivoController ..> java.io.FileWriter
+teobaldo.controller.ArquivoController ..> java.io.IOException
+teobaldo.controller.ArquivoController ..> java.io.ObjectInputStream
+teobaldo.controller.ArquivoController ..> java.io.ObjectOutputStream
+teobaldo.controller.ArquivoController ..> java.nio.file.Files
+teobaldo.controller.ArquivoController ..> java.util.LinkedList
+teobaldo.controller.ArquivoController ..> java.util.Scanner
+teobaldo.controller.ArquivoController ..> java.util.stream.Collectors
+teobaldo.controller.ArquivoController ..> javafx.scene.paint.Color
+teobaldo.controller.ArquivoController ..> javax.swing.JFileChooser
+teobaldo.controller.ArquivoController ..> teobaldo.model.Objeto
+teobaldo.controller.ArquivoController ..> teobaldo.model.Vertice
+teobaldo.controller.InterfaceController ..> java.lang.Override
+teobaldo.controller.InterfaceController ..> javafx.fxml.FXML
+teobaldo.controller.InterfaceController ..> java.io.IOException
+teobaldo.controller.InterfaceController ..> java.net.URL
+teobaldo.controller.InterfaceController ..> java.util.ResourceBundle
+teobaldo.controller.InterfaceController ..> javafx.event.ActionEvent
+teobaldo.controller.InterfaceController ..> javafx.fxml.FXMLLoader
+teobaldo.controller.InterfaceController ..> javafx.scene.Parent
+teobaldo.controller.InterfaceController ..> javafx.scene.Scene
+teobaldo.controller.InterfaceController ..> javafx.scene.canvas.Canvas
+teobaldo.controller.InterfaceController ..> javafx.scene.canvas.GraphicsContext
+teobaldo.controller.InterfaceController ..> javafx.scene.control.Button
+teobaldo.controller.InterfaceController ..> javafx.scene.control.ComboBox
+teobaldo.controller.InterfaceController ..> javafx.scene.control.RadioButton
+teobaldo.controller.InterfaceController ..> javafx.scene.image.Image
+teobaldo.controller.InterfaceController ..> javafx.scene.input.MouseButton
+teobaldo.controller.InterfaceController ..> javafx.scene.input.MouseEvent
+teobaldo.controller.InterfaceController ..> javafx.scene.layout.AnchorPane
+teobaldo.controller.InterfaceController ..> javafx.scene.layout.GridPane
+teobaldo.controller.InterfaceController ..> javafx.scene.paint.Color
+teobaldo.controller.InterfaceController ..> javafx.stage.Stage
+teobaldo.controller.InterfaceController ..> teobaldo.model.Aresta
+teobaldo.controller.InterfaceController ..> teobaldo.model.Objeto
+teobaldo.controller.InterfaceController ..> teobaldo.model.Vertice
+teobaldo.controller.InterfaceController --|> javafx.fxml.Initializable
+teobaldo.controller.ObjetoController ..> java.util.LinkedList
+teobaldo.controller.ObjetoController ..> javafx.scene.canvas.Canvas
+teobaldo.controller.ObjetoController ..> javafx.scene.canvas.GraphicsContext
+teobaldo.controller.ObjetoController ..> teobaldo.model.Aresta
+teobaldo.controller.ObjetoController ..> teobaldo.model.Objeto
+teobaldo.controller.ObjetoController ..> teobaldo.model.Vertice
+teobaldo.controller.ObjetoController --|> java.lang.Cloneable
+teobaldo.controller.RevolveController ..> java.lang.Override
+teobaldo.controller.RevolveController ..> java.net.URL
+teobaldo.controller.RevolveController ..> java.util.ResourceBundle
+teobaldo.controller.RevolveController ..> javafx.stage.Stage
+teobaldo.controller.RevolveController --|> javafx.fxml.Initializable
+teobaldo.controller.SolidoController ..> java.util.LinkedList
+teobaldo.controller.SolidoController ..> javafx.scene.canvas.Canvas
+teobaldo.controller.SolidoController ..> javafx.scene.canvas.GraphicsContext
+teobaldo.controller.SolidoController ..> teobaldo.model.Objeto
+teobaldo.controller.SolidoController ..> teobaldo.model.Solido
+teobaldo.model.Aresta ..> java.lang.Override
+teobaldo.model.Arquivos ..> java.io.FileNotFoundException
+teobaldo.model.Arquivos ..> java.util.Scanner
+teobaldo.model.Arquivos ..> javax.swing.JFileChooser
+teobaldo.model.Face ..> java.util.LinkedList
+teobaldo.model.Lista ..> java.util.LinkedList
+teobaldo.model.Lista --|> java.io.Serializable
+teobaldo.model.Objeto ..> java.lang.Override
+teobaldo.model.Objeto ..> java.util.LinkedList
+teobaldo.model.Objeto ..> javafx.scene.canvas.GraphicsContext
+teobaldo.model.Objeto ..> javafx.scene.paint.Color
+teobaldo.model.Objeto --|> java.io.Serializable
+teobaldo.model.Objeto --|> java.lang.Cloneable
+teobaldo.model.Solido ..> java.util.LinkedList
+teobaldo.model.Vertice ..> java.lang.Override
+teobaldo.model.Vertice --|> java.io.Serializable
+teobaldo.model.Vertice --|> java.lang.Cloneable
+@enduml
