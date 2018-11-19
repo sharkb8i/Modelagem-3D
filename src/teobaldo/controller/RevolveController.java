@@ -209,7 +209,7 @@ public class RevolveController implements Initializable {
                     
                 }
                 controlFaces++;
-                
+                //
                 //f.CalcCor(lampAmbiente, eixos, cam);
             }
             firstA = true;
