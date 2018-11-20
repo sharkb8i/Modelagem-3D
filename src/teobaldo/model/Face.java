@@ -2,6 +2,7 @@ package teobaldo.model;
 
 import java.util.LinkedList;
 import java.util.List;
+import javafx.scene.canvas.GraphicsContext;
 
 public class Face {
     
@@ -243,6 +244,12 @@ public class Face {
             this.cor.setB(0);
         if (this.cor.getB() > 255)
             this.cor.setB(255);
+    }
+    
+    public void pintarFace(GraphicsContext gc) {
+        for(Aresta a : arestas) {
+            gc.fillRect((int) a.getV1().getX(), (int) a.getV1().getY(), (int) a.getV2().getX(), (int) a.getV2().getY());
+        }
     }
     
     @Override

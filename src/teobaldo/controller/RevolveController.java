@@ -1,6 +1,7 @@
 package teobaldo.controller;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -80,11 +81,11 @@ public class RevolveController implements Initializable {
     }
     
     public void draw3D() {
-       if(this.obj.getObjeto3D() == true) {
+        if(this.obj.getObjeto3D() == true) {
             
-            canvasXY.getGraphicsContext2D().setStroke(Color.GREEN);
-            canvasYZ.getGraphicsContext2D().setStroke(Color.GREEN);
-            canvasXZ.getGraphicsContext2D().setStroke(Color.GREEN);
+            canvasXY.getGraphicsContext2D().setStroke(Color.rgb(0, 255, 0, 0));
+            canvasYZ.getGraphicsContext2D().setStroke(Color.rgb(0, 255, 0, 0));
+            canvasXZ.getGraphicsContext2D().setStroke(Color.rgb(0, 255, 0, 0));
             //canvasPers.getGraphicsContext2D().setStroke(Color.GREEN);
             
             this.obj.getArestas().forEach((aresta) -> {
@@ -92,6 +93,8 @@ public class RevolveController implements Initializable {
                 canvasYZ.getGraphicsContext2D().strokeLine(-aresta.getV1().getZ(), -aresta.getV1().getY(), -aresta.getV2().getZ(), -aresta.getV2().getY());
                 canvasXZ.getGraphicsContext2D().strokeLine(aresta.getV1().getX(), aresta.getV1().getZ(), aresta.getV2().getX(), aresta.getV2().getZ());
                 //canvasPers.getGraphicsContext2D().strokeLine(aresta.getV1().getX(), -aresta.getV1().getY(), aresta.getV2().getX(), -aresta.getV2().getY());
+                
+                // TALVEZ PINTAR AS FACES AQUI
             });
         }
     }

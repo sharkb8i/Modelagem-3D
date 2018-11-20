@@ -149,14 +149,6 @@ public class InterfaceController implements Initializable {
         fonteLuzB = new TextField(Double.toString(this.objControl.getFonteLuz().getIb()));
     }
     
-    private void buttonCorObjto() {
-        Color c = JColorChooser.showDialog(null, "Cor do Objeto", this.objControl.getColor(indexObj));
-        if (c != null) {
-            this.objControl.getObjetos().get(indexObj).setCor(c);
-            drawCanvas();
-        }
-    }
-    
     public void selOpcao(int op) {
         this.opcao = op;
     }
@@ -200,6 +192,7 @@ public class InterfaceController implements Initializable {
 
         // Criando um Estágio de Diálogo (Stage Dialog)
         Stage dialogStage = new Stage();
+        dialogStage.setResizable(false);
         dialogStage.setTitle("Propriedades do Objeto");
         Scene scene = new Scene(page);
         dialogStage.setScene(scene);
@@ -213,7 +206,25 @@ public class InterfaceController implements Initializable {
     
     @FXML
     public void cameraConfigsClicked(ActionEvent e) throws IOException {
+        selOpcao(8);
         
+        // Criando novo loader, pane para referência e setando local
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(ObjectConfigsController.class.getResource("/teobaldo/view/CameraConfigs.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+
+        // Criando um Estágio de Diálogo (Stage Dialog)
+        Stage dialogStage = new Stage();
+        dialogStage.setResizable(false);
+        dialogStage.setTitle("Propriedades da Câmera");
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);
+
+        // Setando o Controller.
+        CameraConfigsController ccController = loader.getController();
+        ccController.setDialogStage(dialogStage);
+        
+        dialogStage.show();
     }
     
     @FXML

@@ -1,12 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="teobaldo.controller.ObjectConfigsController">
-    
+<AnchorPane id="AnchorPane" minHeight="170.0" minWidth="270.0" prefHeight="170.0" prefWidth="270.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teobaldo.controller.ObjectConfigsController">
+   <children>
+      <Group layoutX="5.0" layoutY="4.0">
+         <children>
+            <Text layoutX="18.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ka">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+            <TextField fx:id="kaRTextField" layoutX="65.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text layoutX="120.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G" />
+            <TextField fx:id="kaGTextField" layoutX="132.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text layoutX="187.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+            <TextField fx:id="kaBTextField" layoutX="199.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+         </children>
+      </Group>
+      <Group layoutX="5.0" layoutY="40.0">
+         <children>
+            <Text layoutX="18.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kd">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+            <TextField fx:id="kdRTextField" layoutX="65.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text layoutX="120.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G" />
+            <TextField fx:id="kdGTextField" layoutX="132.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text layoutX="187.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+            <TextField fx:id="kdBTextField" layoutX="199.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+         </children>
+      </Group>
+      <Group layoutX="5.0" layoutY="77.0">
+         <children>
+            <Text layoutX="18.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ks">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" />
+            <TextField fx:id="ksRTextField" layoutX="65.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text layoutX="120.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G" />
+            <TextField fx:id="ksGTextField" layoutX="132.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text layoutX="187.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+            <TextField fx:id="ksBTextField" layoutX="199.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+         </children>
+      </Group>
+      <Group layoutX="-4.0" layoutY="-2.0">
+         <children>
+            <Text layoutX="27.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Text>
+            <ColorPicker fx:id="objColorPicker" layoutX="63.0" layoutY="124.0" maxHeight="25.0" maxWidth="100.0" prefHeight="25.0" prefWidth="100.0" />
+         </children>
+      </Group>
+      <Button fx:id="aplicarButton" layoutX="196.0" layoutY="123.0" maxHeight="23.0" maxWidth="53.0" mnemonicParsing="false" onAction="#aplicarButtonClicked" prefHeight="23.0" prefWidth="53.0" text="Aplicar" />
+   </children>
 </AnchorPane>

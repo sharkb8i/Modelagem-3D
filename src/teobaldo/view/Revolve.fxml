@@ -28,7 +28,7 @@
             <Label text="Graus" GridPane.rowIndex="1" />
             <Label text="Eixo" GridPane.rowIndex="2" />
             <TextField fx:id="secoesTxtField" GridPane.columnIndex="1" />
-            <TextField fx:id="grausTxtField" promptText="Max 360 graus" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="grausTxtField" promptText="Max 360 Graus" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ChoiceBox fx:id="eixoChoiceBox" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Group GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
                <children>

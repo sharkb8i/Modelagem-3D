@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="338.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teobaldo.controller.CameraConfigsController">
+   <children>
+      <Group>
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VRP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Text>
+            <Text layoutX="60.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+            <TextField layoutX="70.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="134.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y" />
+            <TextField layoutX="145.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="210.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="z" />
+            <TextField layoutX="220.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="5000" />
+         </children>
+      </Group>
+      <Group layoutY="34.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="60.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+            <TextField layoutX="70.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="134.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y" />
+            <TextField layoutX="145.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="210.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="z" />
+            <TextField layoutX="220.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+         </children>
+      </Group>
+      <Group layoutY="70.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="60.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+            <TextField layoutX="70.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="134.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y" />
+            <TextField layoutX="145.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="1" />
+            <Text layoutX="210.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="z" />
+            <TextField layoutX="220.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+         </children>
+      </Group>
+      <Group layoutY="106.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planos">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="60.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(n)ear" />
+            <TextField layoutX="93.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="70" />
+            <Text layoutX="157.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(f)ar" />
+            <TextField layoutX="180.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="130" />
+            <Text layoutX="245.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="zMin" />
+            <TextField layoutX="274.0" layoutY="9.0" prefHeight="25.0" prefWidth="64.0" text="0.538461" />
+         </children>
+      </Group>
+      <Group layoutY="142.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ViewPort">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="83.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xMin" />
+            <TextField layoutX="113.0" layoutY="10.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="177.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="yMin" />
+            <TextField layoutX="208.0" layoutY="10.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="81.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xMax" />
+            <TextField layoutX="113.0" layoutY="43.0" prefHeight="25.0" prefWidth="50.0" text="288" />
+            <TextField layoutX="208.0" layoutY="43.0" prefHeight="25.0" prefWidth="50.0" text="264" />
+            <Text layoutX="175.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="yMax" />
+         </children>
+      </Group>
+      <Group layoutY="213.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Window">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="85.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cu" />
+            <TextField layoutX="101.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="172.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cv" />
+            <TextField layoutX="188.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Text layoutX="258.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="su" />
+            <TextField layoutX="274.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="100" />
+            <Text layoutX="345.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sv" />
+            <TextField layoutX="361.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="92" />
+         </children>
+      </Group>
+      <Group layoutY="250.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distâncias">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="85.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dx" />
+            <TextField layoutX="101.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="288" />
+            <Text layoutX="172.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dy" />
+            <TextField layoutX="188.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="264" />
+            <Text layoutX="258.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dz" />
+            <TextField layoutX="274.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="60" />
+            <Text layoutX="345.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plano Projeção" />
+            <TextField layoutX="426.0" layoutY="9.0" prefHeight="25.0" prefWidth="50.0" text="100" />
+         </children>
+      </Group>
+      <Button layoutX="424.0" layoutY="300.0" mnemonicParsing="false" text="Aplicar" />
+   </children>
+</AnchorPane>
