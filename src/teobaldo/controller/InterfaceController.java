@@ -26,6 +26,7 @@ import javax.swing.JColorChooser;
 import teobaldo.model.Aresta;
 import teobaldo.model.Lampada;
 import java.awt.Color;
+import teobaldo.model.Camera;
 
 public class InterfaceController implements Initializable {
     GraphicsContext gcXY, gcYZ, gcXZ, gcPers;
@@ -36,6 +37,7 @@ public class InterfaceController implements Initializable {
     
     private Objeto selectObj;
     private Lampada lamp;
+    private Camera cam;
     
     private int opcao, opcaoTrans; 
     private double controlMouseAxisX, controlMouseAxisY;
